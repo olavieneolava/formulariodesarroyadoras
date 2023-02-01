@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Olalla Tellería</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	 <div class="contenedor">
+      <form class="formulario" id="formulario">
+        <h3>Create Account</h3>
+        <!-- ------------NOMBRE----------- -->
+          <label for="nombre" class="formulario-label">Nombre</label>
+          <input type="text" id="nombre" name="nombre" minlength="2" maxlength="50" 
+    pattern="[0-9A-Za-zñÑ\s]+">
+        <!-- ---------------------EMAIL--------------------- -->
+          <label for="email" class="formulario-label">Email</label>
+          <input
+           type= "email" name="correo" id="correo" required pattern="^\S{1,}@\S{2,}\.\S{2,}$"
+          />
+        <!-- ------------------CONTRASEÑA--------------------- -->
+          <label for="clave" class="formulario-label">Clave</label>
+          <input
+           type="password" id="password" name="password"  required 
+           pattern="^(?=.{5,15}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$"  minlength="8"
+		    maxlength="20"
+          />
+        <!-- ------------- CONFIRMACION CLAVE ------------- -->
+          <label for="clave" class="formulario-label">Confirme su clave</label>
+          <input
+           type="password" id="rpassword" name="rpassword"  required 
+           pattern="^(?=.{5,15}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$"  minlength="8"
+		    maxlength="20"
+          />
+            <button type="submit">ENVIAR</button>
+      </form>
+    </div>
+	
+	
+	
+</body>
+</html>
