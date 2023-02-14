@@ -4,35 +4,44 @@
 <meta charset="utf-8">
 <title>Olalla Tellería</title>
 <link href="style.css" rel="stylesheet" type="text/css">
+<link href="js.js">
 </head>
 
 <body>
 	 <div class="contenedor">
-      <form class="formulario" id="formulario">
+      <form class="formulario" id="formulario" action="/">
         <h3>Create Account</h3>
+		
         <!-- ------------NOMBRE----------- -->
           <label for="nombre" class="formulario-label">Nombre</label>
           <input type="text" id="nombre" name="nombre" minlength="2" maxlength="50" 
-    pattern="[0-9A-Za-zñÑ\s]+">
+    pattern="[0-9A-Za-zñÑ\s]+" placeholder="Escribe aqui tu nombre">
+			 
         <!-- ---------------------EMAIL--------------------- -->
+		   
           <label for="email" class="formulario-label">Email</label>
           <input
-           type= "email" name="correo" id="correo" required pattern="^\S{1,}@\S{2,}\.\S{2,}$"
+           type= "email" name="correo" id="correo" required pattern="^\S{1,}@\S{2,}\.\S{2,}$"  placeholder="Correo"
           />
+			   
         <!-- ------------------CONTRASEÑA--------------------- -->
+		   
           <label for="clave" class="formulario-label">Clave</label>
           <input
            type="password" id="password" name="password"  required 
            pattern="^(?=.{5,15}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$"  minlength="8"
-		    maxlength="20"
+		    maxlength="20"  placeholder="Contraseña"
           />
+			     
         <!-- ------------- CONFIRMACION CLAVE ------------- -->
+		  
           <label for="clave" class="formulario-label">Confirme su clave</label>
           <input
            type="password" id="rpassword" name="rpassword"  required 
            pattern="^(?=.{5,15}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$"  minlength="8"
-		    maxlength="20"
+		    maxlength="20"  placeholder="Repite tu contraseña"
           />
+			 
             <button type="submit">ENVIAR</button>
       </form>
     </div>

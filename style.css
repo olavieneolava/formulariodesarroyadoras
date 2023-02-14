@@ -39,6 +39,17 @@ form label{
     color: rgba(172, 186, 225, 0.6);
     font-weight: 540;
 }
+.input-control .formulario-input {
+  border: 1px rgba(180, 183, 192, 0.8) solid;
+  margin: 5px 0 20px;
+  padding: 20px;
+  outline: none;
+  background: white;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 20px;
+  width: 100%;
+}
 form input{
     border: 1px rgba(180, 183, 192, 0.8) solid;
     margin: 10px 0;
