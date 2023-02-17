@@ -1,52 +1,46 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Olalla Tellería - Laboratorio DesArrolladoras</title>
-<link href="style.css" rel="stylesheet" type="text/css">
-<link href="index.js">
-</head>
+<!DOCTYPE html>
 
-<body>
-	 <div class="contenedor">
-      <form class="formulario" id="formulario" action="/">
-        <h3>Create Account</h3>
-		
-        <!-- ------------NOMBRE----------- -->
-          <label for="nombre" class="formulario-label">Nombre</label>
-          <input type="text" id="nombre" name="nombre" minlength="2" maxlength="50" 
-    pattern="[0-9A-Za-zñÑ\s]+" placeholder="Escribe aqui tu nombre">
-			 
-        <!-- ---------------------EMAIL--------------------- -->
-		   
-          <label for="email" class="formulario-label">Email</label>
-          <input
-           type= "email" name="correo" id="correo" required pattern="^\S{1,}@\S{2,}\.\S{2,}$"  placeholder="Correo"
-          />
-			   
-        <!-- ------------------CONTRASEÑA--------------------- -->
-		   
-          <label for="clave" class="formulario-label">Clave</label>
-          <input
-           type="password" id="password" name="password"  required 
-           pattern="^(?=.{5,15}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$"  minlength="8"
-		    maxlength="20"  placeholder="Contraseña"
-          />
-			     
-        <!-- ------------- CONFIRMACION CLAVE ------------- -->
-		  
-          <label for="clave" class="formulario-label">Confirme su clave</label>
-          <input
-           type="password" id="rpassword" name="rpassword"  required 
-           pattern="^(?=.{5,15}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$"  minlength="8"
-		    maxlength="20"  placeholder="Repite tu contraseña"
-          />
-			 
-            <button type="submit">ENVIAR</button>
-      </form>
-    </div>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>Olalla Tellería - Laboratorio DesArrolladoras</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script type="text/javascript" src="index.js"></script>
+	</head>
 	
 	
-	
-</body>
+	<body>
+        <div class="middle_div">
+            <h2>Create Account</h2>
+            
+            <fieldset>
+				<!--NOMBRE-->
+                <label for="nombre">Nombre</label><br>
+                <input type="text" name="nombre" id="nombre" required><br>
+                <span class="error-message" style="display:none" id="span_nombre">Completa este campo</span>
+                <span class="error-message" style="display:none" id="span_nombre_texto">No se aceptan números en el nombre</span>
+                
+				<!--EMAIL-->
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" required><br>
+                <span class="error-message" style="display:none" id="span_email">Completa este campo</span>
+                
+				<!--CONTRASEÑA-->
+                <label for="clave">Clave</label><br>
+                <input type="password" id="clave" minlength="8" value="" /><br>
+                <span class="error-message" style="display:none" id="span_clave">Completa este campo</span>
+                <span class="error-message" style="display:none" id="span_clave_len">Debe tener al menos 8 caracteres</span>
+               
+				<!--CONFIRME CONTRASEÑA-->
+                <label for="clave_confirmar">Confirme su clave</label><br>
+                <input type="password" id="clave_confirmar" minlength="8" value="" /><br>
+                <span class="error-message" style="display:none" id="span_clave_confirmar">Completa este campo</span>
+                <span class="error-message" style="display:none" id="span_clave_confirmar_coinciden">Las contraseñas no coinciden</span>
+				
+                <!--BOTON-->
+                <button class= "registerbtn" type="button" onclick="comprobarDatos()">ENVIAR</button>
+				
+            </fieldset>   
+        </div>
+	</body>
 </html>
